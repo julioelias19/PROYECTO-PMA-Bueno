@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destrucción de Mercancías - PMA</title>
+    <link rel="stylesheet" href="style-mercancia.css">
+</head>
+<body>
+    <header id="header">
+        <img src="Imagenes/logo empresa.png" alt="Logo de la empresa">
+        <h1>Destrucción de Mercancías</h1>
+        <nav>
+            <ul>
+                <a href="index.html" class="btn-link">Inicio</a>
+                <li><a href="#servicios">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="#destruccion">Destrucción de mercancías</a></li>
+                        <li><a href="#gestion">Gestión de residuos</a></li>
+                        <li><a href="#planes">Implementación de planes y programas de gestión de residuos</a></li>
+                        <li><a href="#aguas">Disposición y gestión de aguas residuales</a></li>
+                        <li><a href="#consultoria">Consultoría y auditoría ambiental</a></li>
+                        <li><a href="#formacion">Formación y sensibilización ambiental</a></li>
+                        <li><a href="#estudios">Estudios y análisis en laboratorio</a></li>
+                        <li><a href="#reforestacion">Planes de reforestación y programa de siembra de árboles</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="image-container">
+            <img src="Imagenes/destrucion de mercancia.png" alt="Destrucción de mercancías">
+        </div>
+        <div class="text-container">
+            <h2>Destrucción de mercancías</h2>
+            <p>Ofrecemos un servicio especializado y seguro para la destrucción de mercancías que cumplen su ciclo de vida o presentan defectos, así como productos con marca protegida que requieren un proceso de destrucción confidencial. Entendemos que la gestión de estos productos es esencial para proteger la reputación de su empresa y evitar riesgos comerciales. Por eso, garantizamos un proceso seguro y conforme a las normativas ambientales, asegurando que todos los elementos destruidos son manejados de forma responsable y amigable con el medio.</p>
+        </div>
+    </div>
+    <section id="contacto">
+        <h2>Contáctenos</h2>
+        <p>Estamos aquí para ayudarle. Contáctenos a través de los siguientes canales:</p>
+        <div class="contacto-contenedor">
+            <div class="contacto-item">
+                <img src="Imagenes/email-icon.png" alt="Ícono de Email" class="icono-contacto">
+                <h3>Email</h3>
+                <p><a href="mailto:promotoresma@gmail.com">promotoresma@gmail.com</a></p>
+            </div>
+            <div class="contacto-item">
+                <img src="Imagenes/phone-icon.png" alt="Ícono de Teléfono" class="icono-contacto">
+                <h3>Teléfono</h3>
+                <p><a href="tel:+573005590575">+57 300 559 0575</a></p>
+            </div>
+            <div class="contacto-item">
+                <img src="Imagenes/location-icon.png" alt="Ícono de Ubicación" class="icono-contacto">
+                <h3>Ubicación</h3>
+                <p>Barranquilla, Colombia</p>
+            </div>
+            <div class="contacto-item">
+                <img src="Imagenes/whatsapp-icon.png" alt="Ícono de WhatsApp" class="icono-contacto">
+                <h3>WhatsApp</h3>
+                <p><a href="https://wa.me/573005590575" target="_blank">Envíanos un mensaje</a></p>
+            </div>
+        </div>
+        <div class="contacto-mapa">
+            <h3>Encuéntranos en el mapa</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.7805508412445!2d-74.79636338567416!3d11.004793792142705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42c41e8d1e021%3A0xbac49e6c6a0da512!2sBarranquilla%2C%20Atl%C3%A1ntico%2C%20Colombia!5e0!3m2!1sen!2sco!4v1695984032346!5m2!1sen!2sco" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+        <footer>
+            <p>&copy; 2024 Promotores Medioambientales (PMA). Todos los derechos reservados.</p>
+        </footer>
+    </section>  
+    <script>
+        // Animación al hacer scroll
+        window.onscroll = function() {
+            var header = document.getElementById("header");
+            var whatsappButton = document.getElementById("whatsapp-button");
+            if (window.scrollY > 50) {
+                header.classList.add("shrink");
+                whatsappButton.style.bottom = "10px"; /* Mover el botón hacia arriba */
+            } else {
+                header.classList.remove("shrink");
+                whatsappButton.style.bottom = "20px"; /* Volver a la posición original */
+            }
+        };
+    </script>
+</html>

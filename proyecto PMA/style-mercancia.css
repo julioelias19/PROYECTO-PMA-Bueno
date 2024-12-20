@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: margin-top 0.3s;
+}
+
+header {
+    background: white; /* Fondo blanco para resaltar el logo */
+    border-bottom: 2px solid #006c67; /* Línea debajo del encabezado */
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: padding 0.3s, box-shadow 0.3s; /* Animación para hacer el header más pequeño */
+}
+
+header img {
+    width: 150px; /* Tamaño del logo ajustado */
+    height: auto;
+    transition: width 0.3s ease; /* Animación para reducir el tamaño del logo al hacer scroll */
+}
+
+header h1 {
+    font-size: 32px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #006c67; /* Color actualizado para el encabezado */
+    transition: font-size 0.3s ease;
+}
+
+/* Menú de navegación */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    position: relative;
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #006c67; /* Color actualizado para los enlaces */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    position: relative;
+}
+
+/* Animación de subrayado para los botones de Inicio, Servicios y Contacto */
+header nav a:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #006c67; /* El color de la línea de subrayado */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+header nav a:hover:after,
+header nav a:focus:after {
+    width: 100%;
+    left: 0%;
+}
+
+header nav .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #2a9d8f;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    min-width: 250px;
+}
+
+header nav li:hover .submenu {
+    display: block;
+}
+
+header nav .submenu li {
+    width: 100%; /* Para que ocupe toda la ancho */
+}
+
+header nav .submenu li a {
+    padding: 10px;
+    color: white;
+    border-bottom: 1px solid #006c67; /* Color actualizado para el borde */
+    display: block;
+}
+
+header nav .submenu li a:hover {
+    background: #006c67; /* Color actualizado para el hover */
+}
+
+/* Ajuste de la animación en el encabezado */
+header.shrink {
+    padding: 10px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header.shrink img {
+    width: 120px; /* Reducción del tamaño del logo */
+}
+
+header.shrink h1 {
+    font-size: 24px; /* Reducción del tamaño del título */
+}
+
+/* Estilo de la sección principal */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-container h2 {
+    color: #006c67; /* Color actualizado para el título */
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+footer {
+    background: #264653;
+    color: white;
+    padding: 40px 20px;
+    margin-top: auto;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .footer-section {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+}
+
+footer .footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #2a9d8f;
+}
+
+footer .footer-section p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+footer .footer-section p span {
+    display: flex;
+    align-items: center;
+}
+
+footer .footer-section p span img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+footer a {
+    color: #2a9d8f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    footer .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilo para el botón flotante de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: bounce 2s infinite; /* Animación de rebote */
+}
+
+.whatsapp-button a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-button img {
+    width: 30px;
+    height: 30px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Estilo para el encabezado de contacto */
+footer h2 {
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Espaciado debajo del encabezado */
+}
+
+/* Sección de Contáctenos */
+#contacto {
+    background-color: #006c67; /* Color de fondo similar al encabezado */
+    color: #f2f5f5; /* Texto claro para contraste */
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+#contacto h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contacto-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Distribución adaptable */
+    gap: 20px; /* Espaciado entre elementos */
+    margin: 20px 0;
+    max-width: 1200px; /* Limitar el ancho total */
+    margin: auto;
+}
+
+.contacto-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Animación */
+}
+
+.contacto-item:hover {
+    transform: translateY(-5px); /* Elevación */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    background-color: rgba(196, 190, 190, 0.9); /* Fondo gris al hacer hover */
+}
+
+.contacto-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contacto-item img.icono-contacto {
+    width: 60px;
+    margin-bottom: 10px;
+    border-radius: 50%; /* Íconos redondeados */
+    background: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-item p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+}
+
+.contacto-item p a {
+    text-decoration: none;
+    color: #006c67;
+    font-weight: bold;
+}
+
+.contacto-mapa {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contacto-mapa h3 {
+    font-size: 1.8em;
+    color: #f2f5f5;
+    margin-bottom: 15px;
+}
+
+.contacto-mapa iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 300px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .contacto-contenedor {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
+
+
+.text-container {
+    text-align: center;
+}
+
+
+
+@media (max-width: 480px) {
+    .servicios-contenedor {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
+
+footer {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
